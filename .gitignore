@@ -1,0 +1,3 @@
+*.class
+out
+tests/protobuf/java/proto/
