@@ -1,3 +1,4 @@
 *.class
 out
 tests/protobuf/java/proto/
+linux_kernel/_book
