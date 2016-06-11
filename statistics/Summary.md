@@ -1,2 +1,4 @@
 * [Convergence of Random Variable](ConvOfRV/convOfRv.md)
-* [Bayesian Inference](Bayesian/BayesianInference.md)
+* [Statistical Inference]()
+    * [Parametric Inference](StatisticalInference/ParametricInference.md)
+    * [Bayesian Inference](StatisticalInference/BayesianInference.md)

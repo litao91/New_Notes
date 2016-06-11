@@ -3,3 +3,4 @@ out
 tests/protobuf/java/proto/
 linux_kernel/_book
 node_modules
+_book/
