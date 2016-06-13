@@ -14,3 +14,9 @@ sync_changes.log
 sync_hook.script
 
 **/.Archive
+*.class
+out
+tests/protobuf/java/proto/
+linux_kernel/_book
+node_modules
+_book/
