@@ -18,4 +18,28 @@ django permission
 
 ```
 https://github.com/lambdalisue/django-permission
-``
+```
+
+## Aug 9-th
+
+
+```
+/_api/v1.0/parsingrules/extend/populaterule/
+```
+
+```json
+{
+    "device_id": "102065"
+}
+```
+
+```
+mysql -h rm-2ze87zk13156710bi.mysql.rds.aliyuncs.com chaomeng --user=chaomeng --password=Ichaomeng2015A -e "select name,address,lat as x, lng as y from shops" > /tmp/shops.csv
+```
+
+```python
+from core.rest_utils import Query
+from device.models import Merchant
+q = Query('{"filter": {"telephone":"010-56429392"}}', Merchant)
+```
+  

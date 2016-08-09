@@ -71,3 +71,8 @@ password
 datachaomeng! 
  
  
+Connect to mysql
+
+```
+mysql -h rm-2ze87zk13156710bi.mysql.rds.aliyuncs.com --user=chaomeng --password=Ichaomeng2015A chaomeng
+```

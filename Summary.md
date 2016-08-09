@@ -4,7 +4,10 @@
     * [Accounts](chaomeng/accounts.md)
     * [Environment](chaomeng/start_script.md)
     * [SQL Queries](chaomeng/sql.md)
-
+    * [Brain Storm](chaomeng/brain_storm.md)
+* [Languages]()
+    * [Python]()
+        * [Decorators](languages/python/decorators.md)
 * [Web Dev]()
     * [Django]()
         * [Django Permission](web_dev/django/django-permission.md)
