@@ -10,6 +10,15 @@
         * [Decorators](languages/python/decorators.md)
 * [Web Dev]()
     * [Django]()
-        * [Django Permission](web_dev/django/django-permission.md)
-
-
+        * [Permission](web_dev/django/permission.md)
+            * [Django Permission](web_dev/django/django-permission.md)
+        * [Django Views](web_dev/django/views.md)
+            * [Django Views Detail](web_dev/django/views_detail.md)
+    * [RESTful API]()
+        * [Best Practice](web_dev/RESTful/best_practice.md)
+* [Cheathsheet]()
+    * [Linux]()
+        * [General](cheatsheet/linux/01-general.md)
+        * [i3Wm](cheatsheet/linux/02-i3wm.md)
+    * [PostgreSQL]()
+        * [Basic](cheatsheet/postgres/basic.md)

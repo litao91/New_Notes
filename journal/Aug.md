@@ -42,4 +42,20 @@ from core.rest_utils import Query
 from device.models import Merchant
 q = Query('{"filter": {"telephone":"010-56429392"}}', Merchant)
 ```
-  
+
+```python
+wz = user.models.CMUser.objects.get(pk=10)  
+wz.has_perm('shop.view_by_author')
+```
+
+```json
+{
+    "filters": ["created__gt=2016-04-16T00:00:00","created__lt=2016-05-16T00:00:00"],
+    "order_by": ["created", "name_pinyin"],
+    "fields": ["user", "created", "name"]
+}
+```
+
+```
+https://github.com/carltongibson/django-filter/blob/develop/docs/usage.txt
+```
