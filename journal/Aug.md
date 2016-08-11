@@ -45,10 +45,12 @@ q = Query('{"filter": {"telephone":"010-56429392"}}', Merchant)
 
 ```python
 wz = user.models.CMUser.objects.get(pk=10)  
-wz.has_perm('shop.view_by_author')
+wz.has_perm('device.view_own_shop')
 ```
 
 ```json
+/_api/v1.0/shops
+
 {
     "filters": ["created__gt=2016-04-16T00:00:00","created__lt=2016-05-16T00:00:00"],
     "order_by": ["created", "name_pinyin"],
@@ -59,3 +61,33 @@ wz.has_perm('shop.view_by_author')
 ```
 https://github.com/carltongibson/django-filter/blob/develop/docs/usage.txt
 ```
+
+# Aug 11-th
+
+RESTful API: `/_api/v1.0/shops`
+
+```json
+{
+"o":["-user_id", "-created"],
+"lng__gt":116,
+"lng__lt": 116.35,
+"created__lt": "2016-01-01 00:00:00",
+"s":["user_id", "lng", "created"]
+}
+```
+
+```
+{
+    "per_page":3,
+    "page":2,
+    "o":["-user_id", "-created"],
+    "lng__gt":116,
+    "lng__lt": 116.35,
+    "created__lt": "2016-01-01 00:00:00",
+    "s":["id", "user_id", "lng", "created"]
+}
+```
+
+
+shop id: 13
+merchant id: 1

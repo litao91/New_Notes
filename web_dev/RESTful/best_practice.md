@@ -1,6 +1,6 @@
 # Best Practice of RESTful API
 
-[Original Post](http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-apia)
+[Original Post](http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api)
 
 ## The key principle of REST 
 
@@ -25,10 +25,10 @@ RESTful provide stategies to handle *CRUD* actions using HTTP methods mapped as 
 | ----------- | -------- |
 | `GET /tickets` | a list of tickets |
 | `Get /tickets/12` | Retrieves a specific ticket |
-| `POST /tickets1 | Create a new ticket |
-| `POST /tickets/12 | Update ticket 12 |
-| `PATCH /tickets/12 | Partially update ticket 12 |
-| `DELETE /tickets/12 | Delete ticket #12 |
+| `POST /tickets` | Create a new ticket |
+| `POST /tickets/12` | Update ticket 12 |
+| `PATCH /tickets/12` | Partially update ticket 12 |
+| `DELETE /tickets/12` | Delete ticket #12 |
 
 
 => No method naming conventions to follow and the URL structure is clean & clear. 
