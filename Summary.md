@@ -16,6 +16,8 @@
         * [Random Variables](statistics/probability/rv.md)
     * [Inequalities](statistics/inequalities/inequalities.md)
     * [Convergence of Random Variabel](statistics/ConvOfRV/convOfRv.md)
+        * [Types of convergence](statistics/ConvOfRV/typesOfConv.md)
+        * [Law of Large Number and Centra Limit theorem](statistics/ConvOfRV/loln_clt.md)
     * [Statistical Inference]()
         * [Bayesian Inference](statistics/StatisticalInference/BayesianInference.md)
 * [Languages]()
