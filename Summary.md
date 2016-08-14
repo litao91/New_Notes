@@ -19,6 +19,7 @@
         * [Types of convergence](statistics/ConvOfRV/typesOfConv.md)
         * [Law of Large Number and Centra Limit theorem](statistics/ConvOfRV/loln_clt.md)
     * [Statistical Inference]()
+        * [Basics](statistics/StatisticalInference/basics.md)
         * [Bayesian Inference](statistics/StatisticalInference/BayesianInference.md)
 * [Languages]()
     * [Python]()

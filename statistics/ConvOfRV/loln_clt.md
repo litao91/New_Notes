@@ -50,6 +50,8 @@ $$
 
 ## The Delta Method
 
+It allows us to find the limiting distributino of $$g(Y_n)$$ where $$g$$ is any smooth function.
+
 Basically means
 
 $$
