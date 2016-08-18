@@ -30,6 +30,7 @@
             * [Django Permission](web_dev/django/django-permission.md)
         * [Django Views](web_dev/django/views.md)
             * [Django Views Detail](web_dev/django/views_detail.md)
+        * [Topics](web_dev/django/topics.md)
     * [RESTful API]()
         * [Best Practice](web_dev/RESTful/best_practice.md)
         * [Cursor Based Paginatton](web_dev/RESTful/cursor_based_pagination.md)

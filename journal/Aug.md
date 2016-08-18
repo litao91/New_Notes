@@ -282,3 +282,78 @@ $(function(){
 ```
 http://api.map.baidu.com/place/v2/search?query=超市&scope=2&output=json&location=39.915,116.404&radius=2000&filter=sort_name:distance|sort_rule:1&ak=KtZXesBLWhHHstsBrvMNW2tV
 ```
+
+## Aug-16
+
+Shop Schema
+
+```
++-------------------+---------------------+------+-----+---------+----------------+
+| Field             | Type                | Null | Key | Default | Extra          |
++-------------------+---------------------+------+-----+---------+----------------+
+| id                | int(11) unsigned    | NO   | PRI | NULL    | auto_increment |
+| user_id           | int(11) unsigned    | NO   |     | NULL    |                |
+| update_user_id    | int(11) unsigned    | YES  |     | NULL    |                |
+| merchant_id       | int(11) unsigned    | NO   | MUL | NULL    |                |
+| name              | varchar(255)        | NO   | MUL |         |                |
+| name_pinyin       | varchar(255)        | YES  | MUL | NULL    |                |
+| city_id           | int(5) unsigned     | NO   |     | NULL    |                |
+| city_id_path      | varchar(64)         | YES  |     | NULL    |                |
+| address           | varchar(255)        | NO   |     |         |                |
+| phone             | varchar(20)         | NO   |     |         |                |
+| lat               | decimal(16,12)      | YES  |     | NULL    |                |
+| lng               | decimal(16,12)      | YES  |     | NULL    |                |
+| type              | tinyint(1) unsigned | YES  |     | 0       |                |
+| scale             | tinyint(1) unsigned | YES  |     | 0       |                |
+| area              | varchar(128)        | YES  |     | NULL    |                |
+| is_all_day        | tinyint(1) unsigned | YES  |     | 0       |                |
+| cash_register_num | tinyint(3) unsigned | YES  |     | 0       |                |
+| print_ticket      | tinyint(1) unsigned | YES  |     | 0       |                |
+| keeper            | varchar(64)         | YES  |     | NULL    |                |
+| keeper_telephone  | varchar(20)         | YES  |     | NULL    |                |
+| keeper_age        | int(3) unsigned     | YES  |     | NULL    |                |
+| img_url           | varchar(255)        | YES  |     | NULL    |                |
+| comment           | varchar(255)        | YES  |     | NULL    |                |
+| created           | datetime            | NO   |     | NULL    |                |
+| updated           | datetime            | YES  |     | NULL    |                |
++-------------------+---------------------+------+-----+---------+----------------+
+```
+
+```
+http://stackoverflow.com/questions/4006520/using-html5-file-uploads-with-ajax-and-jquery
+```
+
+```python
+import uuid, datetimefrom os.path import join, basename, splitext
+image = models.ImageField(verbose_name=_(u'Image'), upload_to = tag_image_upload, blank = True, null=True)
+def tag_image_upload(instance, filename):
+    ext = filename.split('.')[-1]    
+    filename = "%s.%s" % (uuid.uuid4(), ext)    
+    return join('tags',  filename)
+```
+
+```javascript
+var marker = new BMap.Marker(point, { 
+    // 指定Marker的icon属性为Symbol 
+    icon: new BMap.Symbol(BMap_Symbol_SHAPE_POINT, { 
+        scale: 1.5,//图标缩放大小 
+        fillColor: "red",//填充颜色
+         fillOpacity: 0.8//填充透明度
+     })
+ });//创建标注
+```
+
+```python
+from django.core.exceptions import ValidationError
+
+def clean_keywords(self):
+    clean_keywords = self.cleaned_data['keywords']
+    cursor = connection.cursor()
+    out = collections.OrderedDict()
+        for k in clean_keywords:
+            c = k.strip()            
+            if StandardCompany.objects.exclude(id=self.instance.id).filter(keywords__contains=[c]).exists():
+                raise ValidationError(u'关键词 %s 已经存在' % c)
+                out[c]=1        
+                return out.keys()
+```

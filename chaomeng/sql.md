@@ -21,3 +21,11 @@ WHERE devices.user_id = users.id  
 AND devices.created BETWEEN '2016-07-01 00:00:00' and '2016-07-31 23:59:59' 
 GROUP BY devices.user_id,users.username;
 ```
+
+```sql
+select shops.user_id, users.username, count(shops.id) 
+FROM shops,users 
+WHERE shops.user_id = users.id  
+AND shops.created BETWEEN '2016-07-01 00:00:00' and '2016-07-31 23:59:59' 
+GROUP BY shops.user_id,users.username;
+```
