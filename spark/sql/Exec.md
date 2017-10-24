@@ -219,45 +219,17 @@ RuleExecutor#execute
       while (continue) {
         curPlan = batch.rules.foldLeft(curPlan) {
           case (plan, rule) =>
-            val startTime = System.nanoTime()
             val result = rule(plan)
-            val runTime = System.nanoTime() - startTime
-            RuleExecutor.timeMap.addAndGet(rule.ruleName, runTime)
-
-            if (!result.fastEquals(plan)) {
-              logTrace(
-                s"""
-                  |=== Applying Rule ${rule.ruleName} ===
-                  |${sideBySide(plan.treeString, result.treeString).mkString("\n")}
-                """.stripMargin)
-            }
-
-            // Run the structural integrity checker against the plan after each rule.
-            if (!isPlanIntegral(result)) {
-              val message = s"After applying rule ${rule.ruleName} in batch ${batch.name}, " +
-                "the structural integrity of the plan is broken."
-              throw new TreeNodeException(result, message, null)
-            }
-
             result
         }
         iteration += 1
+        // max iteration reached
         if (iteration > batch.strategy.maxIterations) {
-          // Only log if this is a rule that is supposed to run more than once.
-          if (iteration != 2) {
-            val message = s"Max iterations (${iteration - 1}) reached for batch ${batch.name}"
-            if (Utils.isTesting) {
-              throw new TreeNodeException(curPlan, message, null)
-            } else {
-              logWarning(message)
-            }
-          }
           continue = false
         }
 
+        // fix point
         if (curPlan.fastEquals(lastPlan)) {
-          logTrace(
-            s"Fixed point reached for batch ${batch.name} after ${iteration - 1} iterations.")
           continue = false
         }
         lastPlan = curPlan
